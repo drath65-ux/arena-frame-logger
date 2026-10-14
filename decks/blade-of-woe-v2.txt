@@ -20,5 +20,7 @@ Deck
 1 Scorching Dragonfire
 2 Silence the Echo
 1 Massacre Wurm
-15 Swamp
-9 Mountain
+2 Blood Crypt
+2 Bloodfell Caves
+13 Swamp
+7 Mountain
