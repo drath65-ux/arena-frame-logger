@@ -24,8 +24,8 @@ final class ScreenReader {
 
     // Fractions of the captured frame.
     private static final float X0 = 0.485f, X1 = 0.585f;
-    private static final float OPP_Y0 = 0.045f, OPP_Y1 = 0.14f;
-    private static final float ME_Y0 = 0.84f, ME_Y1 = 0.94f;
+    private static final float OPP_Y0 = 0.0f, OPP_Y1 = 0.15f;   // wide: life circle sits at ~0.056 on 1280x582, ~0.09 on 1280x632
+    private static final float ME_Y0 = 0.83f, ME_Y1 = 1.0f;
 
     private final TextRecognizer recognizer =
             TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
