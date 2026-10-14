@@ -346,7 +346,7 @@
 1 Ferocification
 2 Fiery Annihilation
 1 Ghitu Lavarunner
-1 Gloin the Mighty
+1 Glóin the Mighty
 2 Goblin Gang Leader
 1 Goblin Trashmaster
 2 Heartfire Immolator
