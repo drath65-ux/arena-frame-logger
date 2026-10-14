@@ -13,6 +13,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.Gravity;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +33,7 @@ public class MainActivity extends Activity {
 
     private TextView status;
     private Button startBtn, stopBtn, shareBtn;
+    private CheckBox collectionBox;
     private final Handler ui = new Handler(Looper.getMainLooper());
     private final Runnable refresher = new Runnable() {
         @Override public void run() {
@@ -60,9 +62,14 @@ public class MainActivity extends Activity {
         help.setText("\n1. Tap Start and allow screen capture (pick MTG Arena if it offers a single app).\n"
                 + "2. Play your game.\n"
                 + "3. Tap Stop in the notification or here.\n"
-                + "4. Tap Share and send the zip to Claude.\n");
+                + "4. Tap Share and send the zip to Claude.\n"
+                + "Only your last 5 sessions are kept in Downloads/ArenaLogger.\n");
         help.setTextSize(15);
         root.addView(help);
+
+        collectionBox = new CheckBox(this);
+        collectionBox.setText("Collection scan mode (fast capture while you scroll your collection)");
+        root.addView(collectionBox);
 
         startBtn = new Button(this);
         startBtn.setText("Start");
@@ -107,6 +114,7 @@ public class MainActivity extends Activity {
     private void refresh() {
         boolean running = CaptureService.running;
         startBtn.setEnabled(!running);
+        collectionBox.setEnabled(!running);
         stopBtn.setEnabled(running);
         SharedPreferences p = getSharedPreferences(PREFS, MODE_PRIVATE);
         String last = p.getString(KEY_LAST_INFO, null);
@@ -151,7 +159,8 @@ public class MainActivity extends Activity {
         Intent i = new Intent(this, CaptureService.class)
                 .setAction(CaptureService.ACTION_START)
                 .putExtra(CaptureService.EXTRA_CODE, resultCode)
-                .putExtra(CaptureService.EXTRA_DATA, data);
+                .putExtra(CaptureService.EXTRA_DATA, data)
+                .putExtra(CaptureService.EXTRA_COLLECTION, collectionBox.isChecked());
         startForegroundService(i);
         Toast.makeText(this, "Recording. Switch to Arena.", Toast.LENGTH_SHORT).show();
     }

@@ -51,6 +51,7 @@ public class CaptureService extends Service {
     static final String ACTION_STOP = "stop";
     static final String EXTRA_CODE = "code";
     static final String EXTRA_DATA = "data";
+    static final String EXTRA_COLLECTION = "collection";
 
     static volatile boolean running = false;
     static volatile boolean zipping = false;
@@ -63,11 +64,16 @@ public class CaptureService extends Service {
 
     // Tuning
     private static final int LONG_SIDE = 1280;        // output width in landscape
-    private static final long INTERVAL_MS = 2000;     // how often to look at the screen
-    private static final long FORCE_SAVE_MS = 20000;  // save at least this often even if static
-    private static final double CHANGE_THRESHOLD = 3.0; // mean luminance diff (0-255) on a tiny thumbnail
-    private static final int JPEG_QUALITY = 70;
     private static final int SIG_W = 48, SIG_H = 27;
+    private static final int KEEP_SESSIONS = 5;       // older zips in Downloads/ArenaLogger are deleted
+
+    // Game mode: slow, only keep frames that changed.
+    // Collection mode: fast and sharper, for scrolling through the collection screen.
+    private long intervalMs;
+    private long forceSaveMs;
+    private double changeThreshold;   // mean luminance diff (0-255) on a tiny thumbnail
+    private int jpegQuality;
+    private String prefix;
 
     private MediaProjection projection;
     private VirtualDisplay virtualDisplay;
@@ -88,7 +94,7 @@ public class CaptureService extends Service {
             } catch (Exception e) {
                 Log.e(TAG, "grab failed", e);
             }
-            handler.postDelayed(this, INTERVAL_MS);
+            handler.postDelayed(this, intervalMs);
         }
     };
 
@@ -110,6 +116,13 @@ public class CaptureService extends Service {
         createChannel();
         // Must be in the foreground before asking for the projection (Android 14+).
         startForeground(NOTIF_RUNNING, runningNotification(0), ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION);
+
+        boolean collection = intent.getBooleanExtra(EXTRA_COLLECTION, false);
+        if (collection) {
+            intervalMs = 700; forceSaveMs = 60000; changeThreshold = 2.0; jpegQuality = 85; prefix = "collection_";
+        } else {
+            intervalMs = 2000; forceSaveMs = 20000; changeThreshold = 3.0; jpegQuality = 70; prefix = "arena_";
+        }
 
         int code = intent.getIntExtra(EXTRA_CODE, 0);
         Intent data = intent.getParcelableExtra(EXTRA_DATA);
@@ -176,13 +189,13 @@ public class CaptureService extends Service {
 
         long now = System.currentTimeMillis();
         int[] sig = signature(bmp);
-        boolean changed = lastSig == null || meanDiff(sig, lastSig) > CHANGE_THRESHOLD;
-        if (changed || now - lastSaveMs > FORCE_SAVE_MS) {
+        boolean changed = lastSig == null || meanDiff(sig, lastSig) > changeThreshold;
+        if (changed || now - lastSaveMs > forceSaveMs) {
             int n = savedCount + 1;
             long sec = (now - startMs) / 1000;
             File out = new File(sessionDir, String.format(Locale.US, "%04d_t%05d.jpg", n, sec));
             try (OutputStream os = new BufferedOutputStream(new FileOutputStream(out))) {
-                bmp.compress(Bitmap.CompressFormat.JPEG, JPEG_QUALITY, os);
+                bmp.compress(Bitmap.CompressFormat.JPEG, jpegQuality, os);
             }
             lastSig = sig;
             lastSaveMs = now;
@@ -239,6 +252,7 @@ public class CaptureService extends Service {
                     .putString(MainActivity.KEY_LAST_INFO, info)
                     .apply();
             deleteDir(sessionDir);
+            cleanupOldZips();
             notifyDone("Saved " + info + ". Tap to share.");
         } catch (Exception e) {
             Log.e(TAG, "zip failed", e);
@@ -255,7 +269,8 @@ public class CaptureService extends Service {
         String txt = "session=" + sessionName + "\n"
                 + "frames=" + savedCount + "\n"
                 + "duration_sec=" + durSec + "\n"
-                + "interval_ms=" + INTERVAL_MS + "\n"
+                + "mode=" + (prefix.startsWith("collection") ? "collection" : "game") + "\n"
+                + "interval_ms=" + intervalMs + "\n"
                 + "size=" + width + "x" + height + "\n"
                 + "filename=NNNN_tSSSSS.jpg (frame number, seconds since start)\n";
         try (OutputStream os = new FileOutputStream(new File(sessionDir, "session.txt"))) {
@@ -266,7 +281,7 @@ public class CaptureService extends Service {
     private Uri zipToDownloads() throws Exception {
         ContentResolver resolver = getContentResolver();
         ContentValues v = new ContentValues();
-        v.put(MediaStore.Downloads.DISPLAY_NAME, "arena_" + sessionName + ".zip");
+        v.put(MediaStore.Downloads.DISPLAY_NAME, prefix + sessionName + ".zip");
         v.put(MediaStore.Downloads.MIME_TYPE, "application/zip");
         v.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/ArenaLogger");
         v.put(MediaStore.Downloads.IS_PENDING, 1);
@@ -292,6 +307,30 @@ public class CaptureService extends Service {
         v.put(MediaStore.Downloads.IS_PENDING, 0);
         resolver.update(uri, v, null, null);
         return uri;
+    }
+
+    /** Keeps the newest KEEP_SESSIONS zips this app wrote to Downloads/ArenaLogger; deletes the rest. */
+    private void cleanupOldZips() {
+        try {
+            ContentResolver resolver = getContentResolver();
+            String sel = MediaStore.Downloads.RELATIVE_PATH + " LIKE ? AND "
+                    + MediaStore.Downloads.DISPLAY_NAME + " LIKE ?";
+            String[] args = {Environment.DIRECTORY_DOWNLOADS + "/ArenaLogger%", "%.zip"};
+            try (android.database.Cursor c = resolver.query(MediaStore.Downloads.EXTERNAL_CONTENT_URI,
+                    new String[]{MediaStore.Downloads._ID}, sel, args,
+                    MediaStore.Downloads.DATE_ADDED + " DESC")) {
+                if (c == null) return;
+                int kept = 0;
+                while (c.moveToNext()) {
+                    if (kept < KEEP_SESSIONS) { kept++; continue; }
+                    Uri old = android.content.ContentUris.withAppendedId(
+                            MediaStore.Downloads.EXTERNAL_CONTENT_URI, c.getLong(0));
+                    try { resolver.delete(old, null, null); } catch (Exception e) { Log.w(TAG, "could not delete " + old, e); }
+                }
+            }
+        } catch (Exception e) {
+            Log.w(TAG, "cleanup failed", e);
+        }
     }
 
     private static void deleteDir(File dir) {
