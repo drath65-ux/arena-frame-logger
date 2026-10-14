@@ -24,3 +24,7 @@ Only the newest 5 zips in `Downloads/ArenaLogger/` are kept; older ones are dele
 
 ## Build
 Every push to `main` builds the APK with GitHub Actions and publishes it to the `latest` release.
+
+## collection.csv
+Card collection read from a collection-scan session (name, color section, copies 1-4).
+Rows noted "copy count not read" are owned but the count wasn't legible. Rescan after opening packs.
