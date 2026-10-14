@@ -35,9 +35,14 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -86,6 +91,12 @@ public class CaptureService extends Service {
     private int[] lastSig;
     private int width, height;
 
+    // Game mode only: on-device screen reading for life totals and the result banner.
+    private ScreenReader reader2;
+    private final List<int[]> life = new ArrayList<>();
+    private String autoResult;
+    private int tickCount;
+
     private final Runnable tick = new Runnable() {
         @Override public void run() {
             if (!running) return;
@@ -123,6 +134,10 @@ public class CaptureService extends Service {
         } else {
             intervalMs = 2000; forceSaveMs = 20000; changeThreshold = 3.0; jpegQuality = 70; prefix = "arena_";
         }
+        life.clear();
+        autoResult = null;
+        tickCount = 0;
+        reader2 = collection ? null : new ScreenReader();
 
         int code = intent.getIntExtra(EXTRA_CODE, 0);
         Intent data = intent.getParcelableExtra(EXTRA_DATA);
@@ -188,6 +203,13 @@ public class CaptureService extends Service {
         }
 
         long now = System.currentTimeMillis();
+        if (reader2 != null) {
+            try {
+                analyze(bmp, (now - startMs) / 1000);
+            } catch (Exception e) {
+                Log.w(TAG, "screen read failed", e);
+            }
+        }
         int[] sig = signature(bmp);
         boolean changed = lastSig == null || meanDiff(sig, lastSig) > changeThreshold;
         if (changed || now - lastSaveMs > forceSaveMs) {
@@ -203,6 +225,16 @@ public class CaptureService extends Service {
             if (n % 10 == 0) notifyRunning(n);
         }
         bmp.recycle();
+    }
+
+    private void analyze(Bitmap bmp, long sec) {
+        tickCount++;
+        if (reader2.readLife(bmp)) life.add(new int[]{(int) sec, reader2.me, reader2.opp});
+        // The result banner is big and stays up for a while; checking every other tick is plenty.
+        if (tickCount % 2 == 0) {
+            String r = reader2.readResult(bmp);
+            if (r != null) autoResult = r;
+        }
     }
 
     private static int[] signature(Bitmap bmp) {
@@ -242,10 +274,13 @@ public class CaptureService extends Service {
         projection = null;
 
         String info;
+        boolean game = reader2 != null;
+        if (reader2 != null) { reader2.close(); reader2 = null; }
         try {
             long durSec = (System.currentTimeMillis() - startMs) / 1000;
             writeSessionInfo(durSec);
             Uri zip = zipToDownloads();
+            if (game) saveMatch(zip, durSec);
             info = savedCount + " frames, " + (durSec / 60) + "m " + (durSec % 60) + "s (" + sessionName + ")";
             getSharedPreferences(MainActivity.PREFS, MODE_PRIVATE).edit()
                     .putString(MainActivity.KEY_LAST_ZIP, zip.toString())
@@ -253,10 +288,15 @@ public class CaptureService extends Service {
                     .apply();
             deleteDir(sessionDir);
             cleanupOldZips();
-            notifyDone("Saved " + info + ". Tap to share.");
+            if (game) {
+                String r = "W".equals(autoResult) ? "Victory detected. " : "L".equals(autoResult) ? "Defeat detected. " : "";
+                notifyDone(r + "Saved " + info + ". Tap to log the match.", true);
+            } else {
+                notifyDone("Saved " + info + ". Tap to share.", false);
+            }
         } catch (Exception e) {
             Log.e(TAG, "zip failed", e);
-            notifyDone("Saving failed: " + e.getMessage());
+            notifyDone("Saving failed: " + e.getMessage(), false);
         } finally {
             zipping = false;
             stopForeground(STOP_FOREGROUND_REMOVE);
@@ -272,9 +312,43 @@ public class CaptureService extends Service {
                 + "mode=" + (prefix.startsWith("collection") ? "collection" : "game") + "\n"
                 + "interval_ms=" + intervalMs + "\n"
                 + "size=" + width + "x" + height + "\n"
-                + "filename=NNNN_tSSSSS.jpg (frame number, seconds since start)\n";
+                + "filename=NNNN_tSSSSS.jpg (frame number, seconds since start)\n"
+                + "auto_result=" + (autoResult == null ? "?" : autoResult) + "\n";
+        if ("arena_".equals(prefix)) {
+            StringBuilder sb = new StringBuilder("sec,me,opp\n");
+            for (int[] p : life) sb.append(p[0]).append(',').append(fmt(p[1])).append(',').append(fmt(p[2])).append('\n');
+            try (OutputStream os = new FileOutputStream(new File(sessionDir, "life.csv"))) {
+                os.write(sb.toString().getBytes("UTF-8"));
+            }
+        }
         try (OutputStream os = new FileOutputStream(new File(sessionDir, "session.txt"))) {
             os.write(txt.getBytes("UTF-8"));
+        }
+    }
+
+    private static String fmt(int v) { return v == MatchStore.UNKNOWN ? "" : String.valueOf(v); }
+
+    private void saveMatch(Uri zip, long durSec) {
+        try {
+            JSONObject m = new JSONObject();
+            m.put("id", sessionName);
+            m.put("time", startMs);
+            m.put("durationSec", durSec);
+            m.put("autoResult", autoResult == null ? "?" : autoResult);
+            m.put("result", autoResult == null ? "?" : autoResult);
+            m.put("deck", getSharedPreferences(MainActivity.PREFS, MODE_PRIVATE).getString(MainActivity.KEY_LAST_DECK, ""));
+            m.put("opp", "");
+            m.put("note", "");
+            m.put("reviewed", false);
+            m.put("zip", zip.toString());
+            JSONArray l = new JSONArray();
+            for (int[] p : life) l.put(new JSONArray().put(p[0]).put(p[1]).put(p[2]));
+            m.put("life", l);
+            MatchStore.upsert(this, m);
+            getSharedPreferences(MainActivity.PREFS, MODE_PRIVATE).edit()
+                    .putString(MainActivity.KEY_PENDING_REVIEW, sessionName).apply();
+        } catch (Exception e) {
+            Log.w(TAG, "could not save match", e);
         }
     }
 
@@ -368,10 +442,11 @@ public class CaptureService extends Service {
         getSystemService(NotificationManager.class).notify(NOTIF_RUNNING, runningNotification(frames));
     }
 
-    private void notifyDone(String text) {
-        PendingIntent sharePi = PendingIntent.getActivity(this, 3,
-                new Intent(this, MainActivity.class).putExtra(MainActivity.EXTRA_SHARE, true)
-                        .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),
+    private void notifyDone(String text, boolean review) {
+        Intent open = new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        if (review) open.putExtra(MainActivity.EXTRA_REVIEW, sessionName);
+        else open.putExtra(MainActivity.EXTRA_SHARE, true);
+        PendingIntent sharePi = PendingIntent.getActivity(this, 3, open,
                 PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
         Notification n = new Notification.Builder(this, CHANNEL)
                 .setSmallIcon(android.R.drawable.ic_menu_save)
