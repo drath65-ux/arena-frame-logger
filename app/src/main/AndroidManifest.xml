@@ -27,7 +27,6 @@
             android:exported="false"
             android:excludeFromRecents="true"
             android:taskAffinity=""
-            android:noHistory="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <service
