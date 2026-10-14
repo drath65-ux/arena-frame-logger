@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.provider.Settings;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
@@ -51,6 +52,7 @@ public class MainActivity extends Activity {
     static final String KEY_LAST_INFO = "last_info";
     static final String KEY_LAST_DECK = "last_deck";
     static final String KEY_PENDING_REVIEW = "pending_review";
+    static final String KEY_COLLECTION_MODE = "collection_mode";
     static final String EXTRA_SHARE = "share_last";
     static final String EXTRA_REVIEW = "review";
 
@@ -61,7 +63,7 @@ public class MainActivity extends Activity {
     private TextView status, recordView;
     private LinearLayout historyList;
     private Button startBtn, stopBtn, shareBtn;
-    private CheckBox collectionBox;
+    private CheckBox collectionBox, bubbleBox;
     private int pad;
     private boolean wasBusy;
     private final Handler ui = new Handler(Looper.getMainLooper());
@@ -96,7 +98,15 @@ public class MainActivity extends Activity {
 
         collectionBox = new CheckBox(this);
         collectionBox.setText("Collection scan mode (fast capture while you scroll your collection)");
+        collectionBox.setChecked(getSharedPreferences(PREFS, MODE_PRIVATE).getBoolean(KEY_COLLECTION_MODE, false));
+        collectionBox.setOnCheckedChangeListener((b, on) ->
+                getSharedPreferences(PREFS, MODE_PRIVATE).edit().putBoolean(KEY_COLLECTION_MODE, on).apply());
         root.addView(collectionBox);
+
+        bubbleBox = new CheckBox(this);
+        bubbleBox.setText("Floating REC/STOP button over other apps (long-press it to hide)");
+        bubbleBox.setOnClickListener(v -> toggleBubble(bubbleBox.isChecked()));
+        root.addView(bubbleBox);
 
         LinearLayout buttons = new LinearLayout(this);
         buttons.setOrientation(LinearLayout.HORIZONTAL);
@@ -165,6 +175,20 @@ public class MainActivity extends Activity {
         }
     }
 
+    private void toggleBubble(boolean on) {
+        if (!on) {
+            stopService(new Intent(this, FloatingButtonService.class));
+            return;
+        }
+        if (!Settings.canDrawOverlays(this)) {
+            Toast.makeText(this, "Allow \"Display over other apps\" for Arena Logger, then come back", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName())));
+            bubbleBox.setChecked(false);
+            return;
+        }
+        startService(new Intent(this, FloatingButtonService.class));
+    }
+
     @Override protected void onResume() {
         super.onResume();
         ui.post(refresher);
@@ -190,6 +214,7 @@ public class MainActivity extends Activity {
         startBtn.setEnabled(!busy);
         collectionBox.setEnabled(!busy);
         stopBtn.setEnabled(running);
+        bubbleBox.setChecked(FloatingButtonService.showing);
         SharedPreferences p = getSharedPreferences(PREFS, MODE_PRIVATE);
         String last = p.getString(KEY_LAST_INFO, null);
         shareBtn.setEnabled(!busy && p.getString(KEY_LAST_ZIP, null) != null);

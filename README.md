@@ -14,6 +14,11 @@ A 15-minute game is roughly 15–25 MB instead of a 200+ MB screen recording.
 3. Tap **Stop** in the notification.
 4. Tap the "Saved…" notification (or **Share last session**) and send the zip to Claude.
 
+## Floating button
+Tick **Floating REC/STOP button** on the main screen (Android will ask you to allow "Display over other apps" once).
+A small button stays on top of Arena: tap **REC** to start (Android shows its usual "Start recording?" prompt),
+tap **STOP** to stop. Drag it anywhere; long-press to hide it.
+
 ## Collection scan
 Tick **Collection scan mode** before Start, then open Arena's collection screen and scroll slowly
 through it (one color filter at a time works best). It captures faster and sharper so Claude can
