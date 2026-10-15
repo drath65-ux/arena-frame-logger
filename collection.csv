@@ -240,6 +240,7 @@ Billowing Shriekmass,B,2,
 Bogslither's Embrace,B,1,Jump In 2026-10-14; color unverified
 Burrog Banemaker,B,1,
 Candy Grapple,B,1,
+Comet Crawler,B,1,Jump In 2026-10-14; color unverified
 Commune with Evil,B,1,
 Compound Fracture,B,4,
 Corrupt Court Official,B,1,
@@ -249,6 +250,7 @@ Cruel Cut,B,1,
 Cursecloth Wrappings,B,1,Jump In 2026-10-14; color unverified
 Deathcap Marionette,B,1,
 Deathless Pilot,B,1,Jump In 2026-10-14; color unverified
+Decode Transmissions,B,1,Jump In 2026-10-14; color unverified
 Demon of Loathing,B,2,
 Desperate Bloodseeker,B,1,
 Desperate Measures,B,1,Jump In 2026-10-14
@@ -261,6 +263,7 @@ Etched Host Doombringer,B,1,owned; copy count not read
 Eternal Thirst,B,1,
 Fake Your Own Death,B,2,
 Fatal Push,B,1,
+Fear of Lost Teeth,B,1,Jump In 2026-10-14; color unverified
 Fear of the Dark,B,1,
 Feed the Bog,B,1,
 Feed the Swarm,B,1,
@@ -269,7 +272,10 @@ Front Porch Sentries,B,1,
 "Gallia, Tragic Host",B,1,
 Give In to Violence,B,1,
 Graveshifter,B,1,
+Gravkill,B,1,Jump In 2026-10-14; color unverified
+Gravpack Monoist,B,1,Jump In 2026-10-14; color unverified
 Great Fierce Bee,B,1,
+Grievous Wound,B,1,Jump In 2026-10-14; color unverified
 Grim Haruspex,B,1,
 Gurmag Rakshasa,B,1,Jump In 2026-10-14
 Gutless Plunderer,B,1,
@@ -284,9 +290,10 @@ Hungry Ghoul,B,1,
 Hymn of the Faller,B,1,
 Ichor Drinker,B,1,
 Infernal Vessel,B,3,
+Insatiable Skittermaw,B,1,Jump In 2026-10-14; color unverified
 "Kaervek, the Punisher",B,1,
 "Kalakscion, Hunger Tyrant",B,1,Jump In 2026-10-14; color unverified
-Lightless Evangel,B,1,
+Lightless Evangel,B,2,
 Locust Spray,B,1,Jump In 2026-10-14; color unverified
 Macabre Reconstruction,B,1,
 Malakir Cullblade,B,3,
@@ -299,7 +306,7 @@ Maximum Overdrive,B,1,
 Mephitic Draught,B,1,
 Midnight Reaper,B,1,
 Moment of Craving,B,2,
-Murder,B,3,
+Murder,B,4,
 My Precious,B,1,
 Namazu Trader,B,1,
 Nezumi Freewheeler,B,1,
@@ -307,6 +314,7 @@ Nightmare,B,1,
 Oversold Cemetery,B,1,
 Phantom Train,B,1,
 Phyrexian Arena,B,1,
+Popular Egotist,B,1,Jump In 2026-10-14; color unverified
 Reassembling Skeleton,B,2,
 Red Room Recruit,B,1,
 Requiting Hex,B,1,
@@ -329,22 +337,28 @@ Skeleton Archer,B,2,
 Skulduggery,B,1,
 Sneering Shadewriter,B,2,
 Solve for Disappointment,B,1,
+"Sothera, the Supervoid",B,1,Jump In 2026-10-14; color unverified
 Soulcoil Viper,B,1,
 Spectral Snatcher,B,1,
 Spin Out,B,1,Jump In 2026-10-14; color unverified
+Sporogenic Infection,B,1,Jump In 2026-10-14; color unverified
 Stab,B,4,
 Summon: Primal Odin,B,1,
 Sunset Saboteur,B,1,
 Supper for Spiders,B,1,
+Susurian Dirgecraft,B,1,Jump In 2026-10-14; color unverified
+Swarm Culler,B,1,Jump In 2026-10-14; color unverified
 Syphon Fuel,B,1,Jump In 2026-10-14; color unverified
 "Teyo, Diamondblade Mage",B,1,
 The Sackville-Bagginses,B,1,
 Theoretical Necromancer,B,1,
 "Tinybones, Pocket Nuisance",B,1,
 Tragic Banshee,B,2,
+Tragic Trajectory,B,1,Jump In 2026-10-14; color unverified
 Tribute to Hunger,B,2,
 Tunnel Rats,B,1,
 Typhoid Rats,B,2,
+Umbral Collar Zealot,B,1,Jump In 2026-10-14; color unverified
 Unburied Earthcarver,B,2,
 Unbury,B,1,Jump In 2026-10-14; color unverified
 Undying Malice,B,2,
@@ -357,11 +371,14 @@ Vampire Opportunist,B,2,
 Vampire Soulcaller,B,1,
 Vampiric Rites,B,2,
 Vengeful Bloodwitch,B,2,
+Virus Beetle,B,1,Jump In 2026-10-14; color unverified
 Wander Off,B,1,
 Way of the Deathbringer,B,1,
+Winter's Intervention,B,1,Jump In 2026-10-14; color unverified
 Worthy Cost,B,2,
 Zombify,B,4,
 Awaken the Inferno,R,1,
+Boilerbilges Ripper,R,1,Jump In 2026-10-14; color unverified
 Bombard,R,1,
 Brambleback Brute,R,1,
 Brass's Bounty,R,1,
@@ -369,6 +386,7 @@ Burn Bright,R,2,
 Burning Curiosity,R,1,Jump In 2026-10-14; color unverified
 Burst Lightning,R,1,
 Combustion Man,R,2,
+Diversion Specialist,R,1,Jump In 2026-10-14; color unverified
 "Dori, Bearer of Friends",R,1,
 Dragon Fodder,R,1,Jump In 2026-10-14
 Elder Auntie,R,1,Jump In 2026-10-14; color unverified
@@ -390,6 +408,7 @@ Impact Tremors,R,1,Jump In 2026-10-14
 Meticulous Artisan,R,1,
 Obliterating Bolt,R,1,Jump In 2026-10-14
 Ogre Battledriver,R,2,
+Piggy Bank,R,1,Jump In 2026-10-14; color unverified
 Raging Redcap,R,1,Jump In 2026-10-14
 "Raphael, Ninja Destroyer",R,1,
 Ripchain Razorkin,R,1,
@@ -496,6 +515,7 @@ Campus Renovation,Multicolor,1,
 Charge the Sanctum,Multicolor,1,
 Cloudblazer,Multicolor,2,
 Cuboid Colony,Multicolor,1,
+Disturbing Mirth,Multicolor,1,Jump In 2026-10-14; color unverified
 Dragonclaw Strike,Multicolor,1,
 Drana and Linvala,Multicolor,1,
 Earth Kingdom Soldier,Multicolor,1,
@@ -547,6 +567,7 @@ Render Speechless,Multicolor,1,
 "Reyav, Master Smith",Multicolor,1,
 "Rootha, Ardent Artisan",Multicolor,2,
 "Ruby, Daring Tracker",Multicolor,2,
+Sawblade Skinripper,Multicolor,1,Jump In 2026-10-14; color unverified
 Scalar Scholar,Multicolor,1,
 Scintillating Encore,Multicolor,2,
 "Sigarda, Font of Blessings",Multicolor,1,
@@ -592,7 +613,7 @@ Azorius Guildgate,Land,4,
 Blazemire Verge,Land,1,
 Blinkmoth Nexus,Land,1,
 Blood Crypt,Land,2,
-Bloodfell Caves,Land,8,
+Bloodfell Caves,Land,10,
 Blossoming Sands,Land,4,
 Boros Guildgate,Land,2,
 Command Tower,Land,4,
@@ -619,6 +640,7 @@ North Pole Gates,Land,1,
 Orzhov Guildgate,Land,4,
 "Rabanastre, Royal City",Land,1,
 Rakdos Guildgate,Land,4,
+Razortrap Gorge,Land,1,Jump In 2026-10-14; color unverified
 Riverpyre Verge,Land,1,
 Rolling Canopy,Land,1,
 Rugged Highlands,Land,4,
@@ -631,6 +653,7 @@ Snow-Covered Island,Land,2,
 Snow-Covered Plains,Land,2,
 Snow-Covered Swamp,Land,2,
 Stingerquill Annex,Land,1,
+"Susur Secundi, Void Altar",Land,1,Jump In 2026-10-14; color unverified
 Swiftwater Cliffs,Land,4,
 Temple of Abandon,Land,1,
 Temple of Deceit,Land,1,

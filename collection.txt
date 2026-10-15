@@ -239,6 +239,7 @@
 1 Bogslither's Embrace
 1 Burrog Banemaker
 1 Candy Grapple
+1 Comet Crawler
 1 Commune with Evil
 4 Compound Fracture
 1 Corrupt Court Official
@@ -248,6 +249,7 @@
 1 Cursecloth Wrappings
 1 Deathcap Marionette
 1 Deathless Pilot
+1 Decode Transmissions
 2 Demon of Loathing
 1 Desperate Bloodseeker
 1 Desperate Measures
@@ -260,6 +262,7 @@
 1 Eternal Thirst
 2 Fake Your Own Death
 1 Fatal Push
+1 Fear of Lost Teeth
 1 Fear of the Dark
 1 Feed the Bog
 1 Feed the Swarm
@@ -268,7 +271,10 @@
 1 Gallia, Tragic Host
 1 Give In to Violence
 1 Graveshifter
+1 Gravkill
+1 Gravpack Monoist
 1 Great Fierce Bee
+1 Grievous Wound
 1 Grim Haruspex
 1 Gurmag Rakshasa
 1 Gutless Plunderer
@@ -283,9 +289,10 @@
 1 Hymn of the Faller
 1 Ichor Drinker
 3 Infernal Vessel
+1 Insatiable Skittermaw
 1 Kaervek, the Punisher
 1 Kalakscion, Hunger Tyrant
-1 Lightless Evangel
+2 Lightless Evangel
 1 Locust Spray
 1 Macabre Reconstruction
 3 Malakir Cullblade
@@ -298,7 +305,7 @@
 1 Mephitic Draught
 1 Midnight Reaper
 2 Moment of Craving
-3 Murder
+4 Murder
 1 My Precious
 1 Namazu Trader
 1 Nezumi Freewheeler
@@ -306,6 +313,7 @@
 1 Oversold Cemetery
 1 Phantom Train
 1 Phyrexian Arena
+1 Popular Egotist
 2 Reassembling Skeleton
 1 Red Room Recruit
 1 Requiting Hex
@@ -328,22 +336,28 @@
 1 Skulduggery
 2 Sneering Shadewriter
 1 Solve for Disappointment
+1 Sothera, the Supervoid
 1 Soulcoil Viper
 1 Spectral Snatcher
 1 Spin Out
+1 Sporogenic Infection
 4 Stab
 1 Summon: Primal Odin
 1 Sunset Saboteur
 1 Supper for Spiders
+1 Susurian Dirgecraft
+1 Swarm Culler
 1 Syphon Fuel
 1 Teyo, Diamondblade Mage
 1 The Sackville-Bagginses
 1 Theoretical Necromancer
 1 Tinybones, Pocket Nuisance
 2 Tragic Banshee
+1 Tragic Trajectory
 2 Tribute to Hunger
 1 Tunnel Rats
 2 Typhoid Rats
+1 Umbral Collar Zealot
 2 Unburied Earthcarver
 1 Unbury
 2 Undying Malice
@@ -356,11 +370,14 @@
 1 Vampire Soulcaller
 2 Vampiric Rites
 2 Vengeful Bloodwitch
+1 Virus Beetle
 1 Wander Off
 1 Way of the Deathbringer
+1 Winter's Intervention
 2 Worthy Cost
 4 Zombify
 1 Awaken the Inferno
+1 Boilerbilges Ripper
 1 Bombard
 1 Brambleback Brute
 1 Brass's Bounty
@@ -368,6 +385,7 @@
 1 Burning Curiosity
 1 Burst Lightning
 2 Combustion Man
+1 Diversion Specialist
 1 Dori, Bearer of Friends
 1 Dragon Fodder
 1 Elder Auntie
@@ -389,6 +407,7 @@
 1 Meticulous Artisan
 1 Obliterating Bolt
 2 Ogre Battledriver
+1 Piggy Bank
 1 Raging Redcap
 1 Raphael, Ninja Destroyer
 1 Ripchain Razorkin
@@ -495,6 +514,7 @@
 1 Charge the Sanctum
 2 Cloudblazer
 1 Cuboid Colony
+1 Disturbing Mirth
 1 Dragonclaw Strike
 1 Drana and Linvala
 1 Earth Kingdom Soldier
@@ -546,6 +566,7 @@
 1 Reyav, Master Smith
 2 Rootha, Ardent Artisan
 2 Ruby, Daring Tracker
+1 Sawblade Skinripper
 1 Scalar Scholar
 2 Scintillating Encore
 1 Sigarda, Font of Blessings
@@ -591,7 +612,7 @@
 1 Blazemire Verge
 1 Blinkmoth Nexus
 2 Blood Crypt
-8 Bloodfell Caves
+10 Bloodfell Caves
 4 Blossoming Sands
 2 Boros Guildgate
 4 Command Tower
@@ -618,6 +639,7 @@
 4 Orzhov Guildgate
 1 Rabanastre, Royal City
 4 Rakdos Guildgate
+1 Razortrap Gorge
 1 Riverpyre Verge
 1 Rolling Canopy
 4 Rugged Highlands
@@ -630,6 +652,7 @@
 2 Snow-Covered Plains
 2 Snow-Covered Swamp
 1 Stingerquill Annex
+1 Susur Secundi, Void Altar
 4 Swiftwater Cliffs
 1 Temple of Abandon
 1 Temple of Deceit
