@@ -89,6 +89,8 @@ public class FloatingButtonService extends Service {
                                     .putInt("bubble_x", lp.x).putInt("bubble_y", lp.y).apply();
                         } else if (System.currentTimeMillis() - downAt > 700) {
                             Toast.makeText(FloatingButtonService.this, "Floating button hidden", Toast.LENGTH_SHORT).show();
+                            getSharedPreferences(MainActivity.PREFS, MODE_PRIVATE).edit()
+                                    .putBoolean(MainActivity.KEY_BUBBLE, false).apply();
                             stopSelf();
                         } else {
                             toggle();

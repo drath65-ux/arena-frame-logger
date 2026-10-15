@@ -54,6 +54,7 @@ public class MainActivity extends Activity {
     static final String KEY_PENDING_REVIEW = "pending_review";
     static final String KEY_COLLECTION_MODE = "collection_mode";
     static final String KEY_FULL_SCREEN = "full_screen";
+    static final String KEY_BUBBLE = "bubble_enabled";
 
     private void askUsageAccess() {
         new android.app.AlertDialog.Builder(this)
@@ -221,6 +222,7 @@ public class MainActivity extends Activity {
     }
 
     private void toggleBubble(boolean on) {
+        getSharedPreferences(PREFS, MODE_PRIVATE).edit().putBoolean(KEY_BUBBLE, on).apply();
         if (!on) {
             stopService(new Intent(this, FloatingButtonService.class));
             return;
@@ -237,6 +239,11 @@ public class MainActivity extends Activity {
     @Override protected void onResume() {
         super.onResume();
         updateFullBoxText();
+        // Updating the app kills the floating button; bring it back if it was turned on.
+        if (getSharedPreferences(PREFS, MODE_PRIVATE).getBoolean(KEY_BUBBLE, false)
+                && !FloatingButtonService.showing && Settings.canDrawOverlays(this)) {
+            startService(new Intent(this, FloatingButtonService.class));
+        }
         ui.post(refresher);
         loadHistory();
         // If a match finished while the app was closed and the notification was dismissed, ask now.
