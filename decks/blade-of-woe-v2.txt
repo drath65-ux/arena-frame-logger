@@ -1,8 +1,10 @@
 Deck
 2 Reassembling Skeleton
 2 Vengeful Bloodwitch
+1 Popular Egotist
+1 Sawblade Skinripper
 3 Infernal Vessel
-2 Heartfire Immolator
+1 Heartfire Immolator
 2 Vampire Gourmand
 1 Dreaded Bat-Cloud
 2 Vampire Nighthawk
@@ -11,7 +13,6 @@ Deck
 2 Arbiter of Woe
 1 Vampire Soulcaller
 2 Combustion Man
-1 Phantom Train
 1 Vampiric Rites
 3 Murder
 2 Hero's Downfall
