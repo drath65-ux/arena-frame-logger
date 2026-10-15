@@ -219,7 +219,10 @@ Windstorm Drake,U,2,
 Wisdom of Ages,U,1,
 Zhalfirin Shapecraft,U,1,
 Abyssal Harvester,B,1,
+Abzan Devotee,B,1,Jump In 2026-10-14
 Adventurous Eater,B,2,
+Aggressive Negotiations,B,1,Jump In 2026-10-14
+Alchemist's Assistant,B,1,Jump In 2026-10-14
 Another Chance,B,1,
 Arbiter of Woe,B,2,
 Auntie's Sentence,B,2,
@@ -247,6 +250,7 @@ Deathcap Marionette,B,1,
 Deathless Pilot,B,1,Jump In 2026-10-14; color unverified
 Demon of Loathing,B,2,
 Desperate Bloodseeker,B,1,
+Desperate Measures,B,1,Jump In 2026-10-14
 Diregraf Ghoul,B,1,
 Dreaded Bat-Cloud,B,1,
 Dreadwing Scavenger,B,4,
@@ -259,12 +263,14 @@ Fatal Push,B,1,
 Fear of the Dark,B,1,
 Feed the Bog,B,1,
 Feed the Swarm,B,1,
+Feral Deathgorger,B,1,Jump In 2026-10-14
 Front Porch Sentries,B,1,
 "Gallia, Tragic Host",B,1,
 Give In to Violence,B,1,
 Graveshifter,B,1,
 Great Fierce Bee,B,1,
 Grim Haruspex,B,1,
+Gurmag Rakshasa,B,1,Jump In 2026-10-14
 Gutless Plunderer,B,1,
 Head of the Hunt,B,1,
 Hecteyes,B,1,
@@ -272,6 +278,7 @@ Heirloom Auntie,B,1,
 Hero's Downfall,B,2,
 High-Society Hunter,B,1,
 Hour of Victory,B,1,Jump In 2026-10-14; color unverified
+Hundred-Battle Veteran,B,1,Jump In 2026-10-14
 Hungry Ghoul,B,1,
 Hymn of the Faller,B,1,
 Ichor Drinker,B,1,
@@ -308,12 +315,14 @@ Ripclaw Wrangler,B,1,Jump In 2026-10-14; color unverified
 Rise of the Dark Realms,B,1,
 Risen Necroregent,B,1,Jump In 2026-10-14; color unverified
 Robot Domination,B,1,
+Salt Road Skirmish,B,1,Jump In 2026-10-14
 Sanguine Syphoner,B,2,
 Sanitarium Skeleton,B,2,
 Savage Gorger,B,3,
 Sengir Vampire,B,3,
 Shefet Archfiend,B,1,Jump In 2026-10-14; color unverified
 Shredder's Revenge,B,2,
+"Sidisi, Regent of the Mire",B,1,Jump In 2026-10-14
 Silence the Echo,B,3,
 Skeleton Archer,B,2,
 Skulduggery,B,1,
@@ -335,11 +344,12 @@ Tragic Banshee,B,2,
 Tribute to Hunger,B,2,
 Tunnel Rats,B,1,
 Typhoid Rats,B,2,
-Unburied Earthcarver,B,1,
+Unburied Earthcarver,B,2,
 Unbury,B,1,Jump In 2026-10-14; color unverified
 Undying Malice,B,2,
 Unlikely Aid,B,3,
 Unliving Legionnaire,B,1,
+Unrooted Ancestor,B,1,Jump In 2026-10-14
 Vampire Gourmand,B,4,
 Vampire Nighthawk,B,2,
 Vampire Opportunist,B,2,
@@ -348,7 +358,7 @@ Vampiric Rites,B,2,
 Vengeful Bloodwitch,B,2,
 Wander Off,B,1,
 Way of the Deathbringer,B,1,
-Worthy Cost,B,1,
+Worthy Cost,B,2,
 Zombify,B,4,
 Awaken the Inferno,R,1,
 Bombard,R,1,
@@ -359,19 +369,27 @@ Burning Curiosity,R,1,Jump In 2026-10-14; color unverified
 Burst Lightning,R,1,
 Combustion Man,R,2,
 "Dori, Bearer of Friends",R,1,
+Dragon Fodder,R,1,Jump In 2026-10-14
 Elder Auntie,R,1,Jump In 2026-10-14; color unverified
 Evil's Thrall,R,1,
+Fanatical Firebrand,R,1,Jump In 2026-10-14
 Ferocification,R,1,
-Fiery Annihilation,R,2,
+Fiery Annihilation,R,3,
 Ghitu Lavarunner,R,1,owned; copy count not read
 Glóin the Mighty,R,1,
 Goblin Gang Leader,R,2,
+Goblin Negotiation,R,1,Jump In 2026-10-14
+Goblin Oriflamme,R,1,Jump In 2026-10-14
+Goblin Surprise,R,1,Jump In 2026-10-14
 Goblin Trashmaster,R,1,
 Gristle Glutton,R,1,Jump In 2026-10-14; color unverified
 Heartfire Immolator,R,2,
-"Krenko, Mob Boss",R,1,
+Impact Tremors,R,1,Jump In 2026-10-14
+"Krenko, Mob Boss",R,2,
 Meticulous Artisan,R,1,
+Obliterating Bolt,R,1,Jump In 2026-10-14
 Ogre Battledriver,R,2,
+Raging Redcap,R,1,Jump In 2026-10-14
 "Raphael, Ninja Destroyer",R,1,
 Ripchain Razorkin,R,1,
 Sazacap's Brew,R,1,
@@ -389,6 +407,7 @@ The Last Agni Kai,R,1,
 Thunder Salvo,R,1,
 "Tomik, Izzet Sparkmage",R,1,
 Urabrask the Hidden,R,1,owned; copy count not read
+Volley Veteran,R,1,Jump In 2026-10-14
 Warren Torchmaster,R,1,
 Affectionate Indrik,G,3,
 Apothecary Stomper,G,3,
@@ -572,7 +591,7 @@ Azorius Guildgate,Land,4,
 Blazemire Verge,Land,1,
 Blinkmoth Nexus,Land,1,
 Blood Crypt,Land,2,
-Bloodfell Caves,Land,6,
+Bloodfell Caves,Land,8,
 Blossoming Sands,Land,4,
 Boros Guildgate,Land,2,
 Command Tower,Land,4,
@@ -582,7 +601,7 @@ Dismal Backwater,Land,4,
 Drannith Ruins,Land,1,
 Elvenking's Halls,Land,1,
 Eroded Canyon,Land,1,
-Evolving Wilds,Land,4,
+Evolving Wilds,Land,6,
 Foul Roads,Land,1,
 Golgari Guildgate,Land,4,
 "Gongaga, Reactor Town",Land,1,
