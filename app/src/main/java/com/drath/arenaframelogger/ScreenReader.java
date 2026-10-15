@@ -53,10 +53,15 @@ final class ScreenReader {
         return changed;
     }
 
-    /** Rejects misreads like 81 for 18: life rarely jumps more than 15 between ticks. */
+    /**
+     * Rejects misreads like 81 for 18. Life rarely jumps up more than 15 between ticks, but a
+     * lethal alpha strike can drop it a lot (8 -> -8), so drops get more room.
+     */
     private static boolean plausible(int v, int last) {
-        if (v < -20 || v > 99) return false;
-        return last == MatchStore.UNKNOWN || Math.abs(v - last) <= 15;
+        if (v < -40 || v > 99) return false;
+        if (last == MatchStore.UNKNOWN) return true;
+        int d = v - last;
+        return d <= 15 && d >= -30;
     }
 
     /** Fallback result from life totals when the banner was missed: "W", "L" or null. */
