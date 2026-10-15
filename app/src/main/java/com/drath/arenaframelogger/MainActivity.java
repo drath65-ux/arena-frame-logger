@@ -53,6 +53,19 @@ public class MainActivity extends Activity {
     static final String KEY_LAST_DECK = "last_deck";
     static final String KEY_PENDING_REVIEW = "pending_review";
     static final String KEY_COLLECTION_MODE = "collection_mode";
+    static final String KEY_FULL_SCREEN = "full_screen";
+
+    /** Capture-consent intent; on Android 14+ it can skip the app picker by forcing entire-screen capture. */
+    static android.content.Intent captureIntent(android.content.Context c) {
+        android.media.projection.MediaProjectionManager mpm =
+                c.getSystemService(android.media.projection.MediaProjectionManager.class);
+        boolean full = c.getSharedPreferences(PREFS, MODE_PRIVATE).getBoolean(KEY_FULL_SCREEN, true);
+        if (full && android.os.Build.VERSION.SDK_INT >= 34) {
+            return mpm.createScreenCaptureIntent(
+                    android.media.projection.MediaProjectionConfig.createConfigForDefaultDisplay());
+        }
+        return mpm.createScreenCaptureIntent();
+    }
     static final String EXTRA_SHARE = "share_last";
     static final String EXTRA_REVIEW = "review";
 
@@ -63,7 +76,7 @@ public class MainActivity extends Activity {
     private TextView status, recordView;
     private LinearLayout historyList;
     private Button startBtn, stopBtn, shareBtn;
-    private CheckBox collectionBox, bubbleBox;
+    private CheckBox collectionBox, bubbleBox, fullBox;
     private int pad;
     private boolean wasBusy;
     private final Handler ui = new Handler(Looper.getMainLooper());
@@ -107,6 +120,13 @@ public class MainActivity extends Activity {
         bubbleBox.setText("Floating REC/STOP button over other apps (long-press it to hide)");
         bubbleBox.setOnClickListener(v -> toggleBubble(bubbleBox.isChecked()));
         root.addView(bubbleBox);
+
+        fullBox = new CheckBox(this);
+        fullBox.setText("Record entire screen (skips the app picker; stop recording before switching to other apps)");
+        fullBox.setChecked(getSharedPreferences(PREFS, MODE_PRIVATE).getBoolean(KEY_FULL_SCREEN, true));
+        fullBox.setOnCheckedChangeListener((b, on) ->
+                getSharedPreferences(PREFS, MODE_PRIVATE).edit().putBoolean(KEY_FULL_SCREEN, on).apply());
+        root.addView(fullBox);
 
         LinearLayout buttons = new LinearLayout(this);
         buttons.setOrientation(LinearLayout.HORIZONTAL);
@@ -213,6 +233,7 @@ public class MainActivity extends Activity {
         boolean busy = running || CaptureService.zipping;
         startBtn.setEnabled(!busy);
         collectionBox.setEnabled(!busy);
+        fullBox.setEnabled(!busy);
         stopBtn.setEnabled(running);
         bubbleBox.setChecked(FloatingButtonService.showing);
         SharedPreferences p = getSharedPreferences(PREFS, MODE_PRIVATE);
@@ -402,8 +423,7 @@ public class MainActivity extends Activity {
     }
 
     private void requestCapture() {
-        MediaProjectionManager mpm = getSystemService(MediaProjectionManager.class);
-        startActivityForResult(mpm.createScreenCaptureIntent(), REQ_CAPTURE);
+        startActivityForResult(captureIntent(this), REQ_CAPTURE);
     }
 
     @Override

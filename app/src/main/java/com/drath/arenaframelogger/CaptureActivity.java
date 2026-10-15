@@ -2,7 +2,6 @@ package com.drath.arenaframelogger;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.projection.MediaProjectionManager;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -19,8 +18,7 @@ public class CaptureActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (CaptureService.running || CaptureService.zipping) { finish(); return; }
-        MediaProjectionManager mpm = getSystemService(MediaProjectionManager.class);
-        startActivityForResult(mpm.createScreenCaptureIntent(), REQ);
+        startActivityForResult(MainActivity.captureIntent(this), REQ);
     }
 
     @Override
