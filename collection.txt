@@ -166,6 +166,7 @@
 1 Landscape Painter
 1 Lost in Space
 1 Marauding Brinefang
+1 Matterbending Mage
 1 Meeting of Minds
 1 Messenger Hawk
 1 Mindseeker Oculus
