@@ -55,6 +55,27 @@ public class MainActivity extends Activity {
     static final String KEY_COLLECTION_MODE = "collection_mode";
     static final String KEY_FULL_SCREEN = "full_screen";
 
+    private void askUsageAccess() {
+        new android.app.AlertDialog.Builder(this)
+                .setTitle("Only record Arena?")
+                .setMessage("Entire-screen mode records whatever is on screen. Grant \"Usage access\" to Arena Logger "
+                        + "and it will only keep frames while MTG Arena is open, like single-app mode.\n\n"
+                        + "Find Arena Logger in the list and turn it on.")
+                .setPositiveButton("Open settings", (d, w) -> {
+                    try {
+                        startActivity(new android.content.Intent(android.provider.Settings.ACTION_USAGE_ACCESS_SETTINGS));
+                    } catch (Exception ignored) {}
+                })
+                .setNegativeButton("Not now", null)
+                .show();
+    }
+
+    private void updateFullBoxText() {
+        if (fullBox == null) return;
+        String state = AppWatcher.hasUsageAccess(this) ? "only Arena is kept" : "long-press here to grant Usage access so only Arena is kept";
+        fullBox.setText("Record entire screen (skips the app picker; " + state + ")");
+    }
+
     /** Capture-consent intent; on Android 14+ it can skip the app picker by forcing entire-screen capture. */
     static android.content.Intent captureIntent(android.content.Context c) {
         android.media.projection.MediaProjectionManager mpm =
@@ -124,9 +145,13 @@ public class MainActivity extends Activity {
         fullBox = new CheckBox(this);
         fullBox.setText("Record entire screen (skips the app picker; stop recording before switching to other apps)");
         fullBox.setChecked(getSharedPreferences(PREFS, MODE_PRIVATE).getBoolean(KEY_FULL_SCREEN, true));
-        fullBox.setOnCheckedChangeListener((b, on) ->
-                getSharedPreferences(PREFS, MODE_PRIVATE).edit().putBoolean(KEY_FULL_SCREEN, on).apply());
+        fullBox.setOnCheckedChangeListener((b, on) -> {
+            getSharedPreferences(PREFS, MODE_PRIVATE).edit().putBoolean(KEY_FULL_SCREEN, on).apply();
+            if (on && !AppWatcher.hasUsageAccess(this)) askUsageAccess();
+        });
+        fullBox.setOnLongClickListener(v -> { askUsageAccess(); return true; });
         root.addView(fullBox);
+        updateFullBoxText();
 
         LinearLayout buttons = new LinearLayout(this);
         buttons.setOrientation(LinearLayout.HORIZONTAL);
@@ -211,6 +236,7 @@ public class MainActivity extends Activity {
 
     @Override protected void onResume() {
         super.onResume();
+        updateFullBoxText();
         ui.post(refresher);
         loadHistory();
         // If a match finished while the app was closed and the notification was dismissed, ask now.

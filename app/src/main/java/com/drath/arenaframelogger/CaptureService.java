@@ -178,6 +178,7 @@ public class CaptureService extends Service {
         lastSig = null;
         startMs = System.currentTimeMillis();
         lastSaveMs = 0;
+        AppWatcher.reset();
         running = true;
         handler.postDelayed(tick, 1000);
     }
@@ -185,6 +186,7 @@ public class CaptureService extends Service {
     private void grab() throws Exception {
         Image img = reader.acquireLatestImage();
         if (img == null) return;
+        if (!AppWatcher.allowFrame(this)) { img.close(); return; }  // not in Arena: keep nothing
         Bitmap bmp;
         try {
             Image.Plane plane = img.getPlanes()[0];
