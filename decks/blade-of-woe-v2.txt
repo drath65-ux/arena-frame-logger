@@ -1,7 +1,6 @@
 Deck
 2 Reassembling Skeleton
 2 Vengeful Bloodwitch
-1 Lightless Evangel
 3 Infernal Vessel
 2 Heartfire Immolator
 2 Vampire Gourmand
@@ -17,7 +16,7 @@ Deck
 3 Murder
 2 Hero's Downfall
 2 Fiery Annihilation
-1 Scorching Dragonfire
+2 Scorching Dragonfire
 2 Silence the Echo
 1 Massacre Wurm
 2 Blood Crypt
