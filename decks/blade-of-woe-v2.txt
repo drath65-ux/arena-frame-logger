@@ -17,7 +17,7 @@ Deck
 2 Hero's Downfall
 2 Fiery Annihilation
 2 Scorching Dragonfire
-2 Silence the Echo
+2 Worthy Cost
 1 Massacre Wurm
 2 Blood Crypt
 2 Bloodfell Caves
