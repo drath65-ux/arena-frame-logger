@@ -32,6 +32,7 @@ public class FloatingButtonService extends Service {
     private final Runnable refresher = new Runnable() {
         @Override public void run() {
             updateLook();
+            clampToScreen();
             ui.postDelayed(this, 1000);
         }
     };
@@ -54,7 +55,7 @@ public class FloatingButtonService extends Service {
 
         lp = new WindowManager.LayoutParams(size, size,
                 WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY,
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                 PixelFormat.TRANSLUCENT);
         lp.gravity = Gravity.TOP | Gravity.START;
         lp.x = getSharedPreferences(MainActivity.PREFS, MODE_PRIVATE).getInt("bubble_x", 0);
@@ -101,9 +102,38 @@ public class FloatingButtonService extends Service {
             }
         });
 
+        clampPosition();
         wm.addView(bubble, lp);
         showing = true;
         ui.post(refresher);
+    }
+
+    /**
+     * Keeps the button on screen. A position saved while Arena was in landscape can be far
+     * off the edge in portrait, which made the button invisible.
+     */
+    private boolean clampPosition() {
+        android.util.DisplayMetrics dm = getResources().getDisplayMetrics();
+        int maxX = Math.max(0, dm.widthPixels - lp.width);
+        int maxY = Math.max(0, dm.heightPixels - lp.height);
+        int x = Math.min(Math.max(lp.x, 0), maxX);
+        int y = Math.min(Math.max(lp.y, 0), maxY);
+        boolean moved = x != lp.x || y != lp.y;
+        lp.x = x;
+        lp.y = y;
+        return moved;
+    }
+
+    private void clampToScreen() {
+        if (bubble != null && wm != null && clampPosition()) {
+            try { wm.updateViewLayout(bubble, lp); } catch (Exception ignored) {}
+        }
+    }
+
+    @Override
+    public void onConfigurationChanged(android.content.res.Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        clampToScreen();
     }
 
     private void toggle() {
