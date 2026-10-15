@@ -40,6 +40,8 @@ final class ScreenReader {
         Integer m = readNumber(crop(frame, ME_Y0, ME_Y1));
         Integer o = readNumber(crop(frame, OPP_Y0, OPP_Y1));
         boolean changed = false;
+        if (m != null && !plausible(m, me)) m = null;
+        if (o != null && !plausible(o, opp)) o = null;
         if (m != null) {
             if (m.equals(pendingMe) && m != me) { me = m; changed = true; }
             pendingMe = m;
@@ -49,6 +51,21 @@ final class ScreenReader {
             pendingOpp = o;
         }
         return changed;
+    }
+
+    /** Rejects misreads like 81 for 18: life rarely jumps more than 15 between ticks. */
+    private static boolean plausible(int v, int last) {
+        if (v < -20 || v > 99) return false;
+        return last == MatchStore.UNKNOWN || Math.abs(v - last) <= 15;
+    }
+
+    /** Fallback result from life totals when the banner was missed: "W", "L" or null. */
+    String lifeResult() {
+        boolean meDead = (me != MatchStore.UNKNOWN && me <= 0) || (pendingMe != null && pendingMe <= 0);
+        boolean oppDead = (opp != MatchStore.UNKNOWN && opp <= 0) || (pendingOpp != null && pendingOpp <= 0);
+        if (meDead && !oppDead) return "L";
+        if (oppDead && !meDead) return "W";
+        return null;
     }
 
     /** "W", "L" or null. */

@@ -275,7 +275,10 @@ public class CaptureService extends Service {
 
         String info;
         boolean game = reader2 != null;
-        if (reader2 != null) { reader2.close(); reader2 = null; }
+        if (reader2 != null) {
+            if (autoResult == null) autoResult = reader2.lifeResult();
+            reader2.close(); reader2 = null;
+        }
         try {
             long durSec = (System.currentTimeMillis() - startMs) / 1000;
             writeSessionInfo(durSec);
