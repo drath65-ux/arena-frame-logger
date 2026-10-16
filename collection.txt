@@ -129,6 +129,7 @@
 1 Deduce
 2 Dispelling Exhale
 1 Dive Down
+1 Diviner of Victory
 1 Divining Duelist
 1 Donatello, Way with Machines
 1 Drake Hatcher
@@ -150,12 +151,14 @@
 1 Geyser Drake
 1 Glamermite
 1 Glint
+1 Hapatra, the Desert Frost
 1 High Fae Trickster
 1 Hydraulic Helper
 1 Hydro-Channeler
 1 Ice Magic
 1 Ice Out
 1 Icewind Elemental
+1 Icy Reception
 2 Illvoi Light Jammer
 2 Inspiration from Beyond
 2 Interdisciplinary Studies
@@ -204,7 +207,7 @@
 1 Tetsuko Umezawa, Fugitive
 1 The Prima Vista
 1 Theorist's Proxy
-1 Theorix Metamage
+2 Theorix Metamage
 1 Thoughtsteal Sprites
 1 Tidal Terror
 1 Tolarian Contempt
@@ -268,7 +271,7 @@
 1 Feed the Swarm
 1 Feral Deathgorger
 1 Front Porch Sentries
-1 Gallia, Tragic Host
+2 Gallia, Tragic Host
 1 Give In to Violence
 1 Graveshifter
 1 Gravkill
@@ -314,6 +317,7 @@
 1 Phantom Train
 1 Phyrexian Arena
 1 Popular Egotist
+1 Rank Rat
 2 Reassembling Skeleton
 1 Red Room Recruit
 1 Requiting Hex
@@ -377,6 +381,7 @@
 2 Worthy Cost
 4 Zombify
 1 Awaken the Inferno
+1 Blazing Crescendo
 1 Boilerbilges Ripper
 1 Bombard
 1 Brambleback Brute
@@ -602,6 +607,7 @@
 1 Kitesail
 1 Magnifying Glass
 1 Starting Column
+1 Traxos, Scourge Eternal
 1 Viv Vision, Teen Synthezoid
 2 Walking Sarcophagus
 1 Adagia, Windswept Bastion

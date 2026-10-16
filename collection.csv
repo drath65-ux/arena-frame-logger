@@ -130,6 +130,7 @@ Dazzling Denial,U,1,
 Deduce,U,1,
 Dispelling Exhale,U,2,
 Dive Down,U,1,owned; copy count not read
+Diviner of Victory,U,1,pack 2026-10-15
 Divining Duelist,U,1,
 "Donatello, Way with Machines",U,1,
 Drake Hatcher,U,1,
@@ -151,12 +152,14 @@ Frolicking Familiar,U,1,
 Geyser Drake,U,1,
 Glamermite,U,1,
 Glint,U,1,
+"Hapatra, the Desert Frost",U,1,pack 2026-10-15
 High Fae Trickster,U,1,
 Hydraulic Helper,U,1,
 Hydro-Channeler,U,1,
 Ice Magic,U,1,owned; copy count not read
 Ice Out,U,1,
 Icewind Elemental,U,1,
+Icy Reception,U,1,pack 2026-10-15
 Illvoi Light Jammer,U,2,
 Inspiration from Beyond,U,2,
 Interdisciplinary Studies,U,2,
@@ -205,7 +208,7 @@ Tempest Angler,U,1,
 "Tetsuko Umezawa, Fugitive",U,1,
 The Prima Vista,U,1,
 Theorist's Proxy,U,1,
-Theorix Metamage,U,1,
+Theorix Metamage,U,2,
 Thoughtsteal Sprites,U,1,
 Tidal Terror,U,1,owned; copy count not read
 Tolarian Contempt,U,1,
@@ -269,7 +272,7 @@ Feed the Bog,B,1,
 Feed the Swarm,B,1,
 Feral Deathgorger,B,1,Jump In 2026-10-14
 Front Porch Sentries,B,1,
-"Gallia, Tragic Host",B,1,
+"Gallia, Tragic Host",B,2,
 Give In to Violence,B,1,
 Graveshifter,B,1,
 Gravkill,B,1,Jump In 2026-10-14; color unverified
@@ -315,6 +318,7 @@ Oversold Cemetery,B,1,
 Phantom Train,B,1,
 Phyrexian Arena,B,1,
 Popular Egotist,B,1,Jump In 2026-10-14; color unverified
+Rank Rat,B,1,pack 2026-10-15
 Reassembling Skeleton,B,2,
 Red Room Recruit,B,1,
 Requiting Hex,B,1,
@@ -378,6 +382,7 @@ Winter's Intervention,B,1,Jump In 2026-10-14; color unverified
 Worthy Cost,B,2,
 Zombify,B,4,
 Awaken the Inferno,R,1,
+Blazing Crescendo,R,1,pack 2026-10-15
 Boilerbilges Ripper,R,1,Jump In 2026-10-14; color unverified
 Bombard,R,1,
 Brambleback Brute,R,1,
@@ -603,6 +608,7 @@ Juggernaut,Colorless,1,
 Kitesail,Colorless,1,
 Magnifying Glass,Colorless,1,
 Starting Column,Colorless,1,
+"Traxos, Scourge Eternal",Colorless,1,pack 2026-10-15
 "Viv Vision, Teen Synthezoid",Colorless,1,
 Walking Sarcophagus,Colorless,2,
 "Adagia, Windswept Bastion",Land,1,
