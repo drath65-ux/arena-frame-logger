@@ -3,12 +3,13 @@ Deck
 2 Vengeful Bloodwitch
 1 Popular Egotist
 1 Sawblade Skinripper
+2 Marauding Blight-Priest
 3 Infernal Vessel
 1 Heartfire Immolator
 2 Vampire Gourmand
 1 Dreaded Bat-Cloud
 2 Vampire Nighthawk
-2 Tragic Banshee
+1 Tragic Banshee
 1 Massacre Girl, Most Wanted
 2 Arbiter of Woe
 1 Vampire Soulcaller
@@ -16,7 +17,7 @@ Deck
 1 Vampiric Rites
 3 Murder
 2 Hero's Downfall
-2 Fiery Annihilation
+1 Fiery Annihilation
 2 Scorching Dragonfire
 2 Worthy Cost
 1 Massacre Wurm
