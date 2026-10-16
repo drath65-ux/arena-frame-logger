@@ -233,7 +233,7 @@ public class CaptureService extends Service {
         tickCount++;
         if (reader2.readLife(bmp)) life.add(new int[]{(int) sec, reader2.me, reader2.opp});
         // The result banner is big and stays up for a while; checking every other tick is plenty.
-        if (tickCount % 2 == 0) {
+        if (autoResult == null || tickCount % 2 == 0) {
             String r = reader2.readResult(bmp);
             if (r != null) autoResult = r;
         }
