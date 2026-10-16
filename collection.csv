@@ -261,6 +261,7 @@ Diregraf Ghoul,B,1,
 Dreaded Bat-Cloud,B,1,
 Dreadwing Scavenger,B,4,
 Dreg Recycler,B,1,
+Eaten Alive,B,1,pack 2026-10-15
 Engine Rat,B,3,
 Etched Host Doombringer,B,1,owned; copy count not read
 Eternal Thirst,B,1,
@@ -301,7 +302,7 @@ Locust Spray,B,1,Jump In 2026-10-14; color unverified
 Macabre Reconstruction,B,1,
 Malakir Cullblade,B,3,
 Malboro,B,1,
-Marauding Blight-Priest,B,1,
+Marauding Blight-Priest,B,2,
 Mardu Outrider,B,2,
 "Massacre Girl, Most Wanted",B,1,
 Massacre Wurm,B,1,
@@ -347,6 +348,7 @@ Spectral Snatcher,B,1,
 Spin Out,B,1,Jump In 2026-10-14; color unverified
 Sporogenic Infection,B,1,Jump In 2026-10-14; color unverified
 Stab,B,4,
+Stromkirk Bloodthief,B,1,pack 2026-10-15
 Summon: Primal Odin,B,1,
 Sunset Saboteur,B,1,
 Supper for Spiders,B,1,
@@ -380,7 +382,7 @@ Wander Off,B,1,
 Way of the Deathbringer,B,1,
 Winter's Intervention,B,1,Jump In 2026-10-14; color unverified
 Worthy Cost,B,2,
-Zombify,B,4,
+Zombify,B,5,
 Awaken the Inferno,R,1,
 Blazing Crescendo,R,1,pack 2026-10-15
 Boilerbilges Ripper,R,1,Jump In 2026-10-14; color unverified
@@ -409,6 +411,7 @@ Goblin Trashmaster,R,1,
 Gristle Glutton,R,1,Jump In 2026-10-14; color unverified
 Heartfire Immolator,R,2,
 Impact Tremors,R,1,Jump In 2026-10-14
+Incinerating Blast,R,1,pack 2026-10-15
 "Krenko, Mob Boss",R,2,
 Meticulous Artisan,R,1,
 Obliterating Bolt,R,1,Jump In 2026-10-14
@@ -593,6 +596,7 @@ Whiplash Wordsmith,Multicolor,1,
 Zimone and Dina,Multicolor,1,
 "Zurgo, Thunder's Decree",Multicolor,1,
 Bandit's Haul,Colorless,1,
+Banner of Kinship,Colorless,1,pack 2026-10-15
 Bender's Waterskin,Colorless,1,
 Camera Launcher,Colorless,1,
 Changeling Wayfinder,Colorless,1,
@@ -601,7 +605,7 @@ Firdoch Core,Colorless,1,
 Gleaming Barrier,Colorless,3,
 Gold Pan,Colorless,1,
 Gold-Forged Thopteryx,Colorless,1,
-Goldvein Pick,Colorless,4,
+Goldvein Pick,Colorless,5,
 Jade-Cast Sentinel,Colorless,1,
 Jeskai Monument,Colorless,1,
 Juggernaut,Colorless,1,
@@ -660,7 +664,7 @@ Snow-Covered Plains,Land,2,
 Snow-Covered Swamp,Land,2,
 Stingerquill Annex,Land,1,
 "Susur Secundi, Void Altar",Land,1,Jump In 2026-10-14; color unverified
-Swiftwater Cliffs,Land,4,
+Swiftwater Cliffs,Land,5,
 Temple of Abandon,Land,1,
 Temple of Deceit,Land,1,
 Temple of Enlightenment,Land,1,
