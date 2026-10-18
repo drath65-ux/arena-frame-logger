@@ -38,7 +38,7 @@
 1 Goring Ceratops
 2 Graft Surgeon
 4 Hallowed Priest
-4 Healer's Hawk
+5 Healer's Hawk
 1 Helicarrier Strike
 4 Helpful Hunter
 1 Helping Hand
@@ -192,7 +192,7 @@
 2 Return to the Sewers
 2 Riddlemaster Sphinx
 1 Roadside Blowout
-3 Run Away Together
+4 Run Away Together
 1 Selfcraft Mechan
 1 Sinister Cryologist
 1 Sleep
@@ -211,7 +211,7 @@
 1 Thoughtsteal Sprites
 1 Tidal Terror
 1 Tolarian Contempt
-3 Tolarian Terror
+4 Tolarian Terror
 1 Twinned Vision
 1 Unlucky Drop
 1 Variable Chaser
@@ -332,6 +332,7 @@
 2 Sanguine Syphoner
 2 Sanitarium Skeleton
 3 Savage Gorger
+1 Seeker's Folly
 3 Sengir Vampire
 1 Shefet Archfiend
 2 Shredder's Revenge
@@ -373,7 +374,7 @@
 4 Vampire Gourmand
 2 Vampire Nighthawk
 2 Vampire Opportunist
-1 Vampire Soulcaller
+2 Vampire Soulcaller
 2 Vampiric Rites
 2 Vengeful Bloodwitch
 1 Virus Beetle
@@ -421,7 +422,7 @@
 1 Ripchain Razorkin
 1 Sazacap's Brew
 2 Scorching Dragonfire
-2 Searslicer Goblin
+3 Searslicer Goblin
 1 Sizzling Soloist
 1 Skilled Battlecarver
 2 Skyraker Giant
