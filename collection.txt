@@ -18,7 +18,7 @@
 2 Cat Collector
 1 Celestial Armor
 4 Charmed Stray
-4 Claws Out
+5 Claws Out
 2 Confront the Assault
 3 Crusader of Odric
 1 Cut Short
@@ -118,7 +118,7 @@
 1 Archmage of Runes
 1 Arni, Humble Scribe
 1 Benthic Criminologists
-2 Bigfin Bouncer
+3 Bigfin Bouncer
 1 Brush Off
 1 Chancellor of Tales
 3 Cloudkin Seer
@@ -160,7 +160,7 @@
 1 Icewind Elemental
 1 Icy Reception
 2 Illvoi Light Jammer
-2 Inspiration from Beyond
+3 Inspiration from Beyond
 2 Interdisciplinary Studies
 1 Jaded Analyst
 1 Jill, Shiva's Dominant
@@ -188,6 +188,7 @@
 2 Quick Study
 1 Reenact the Crime
 2 Reflective Rimekin
+1 Refute
 1 Repulse
 2 Return to the Sewers
 2 Riddlemaster Sphinx
@@ -426,8 +427,10 @@
 1 Sizzling Soloist
 1 Skilled Battlecarver
 2 Skyraker Giant
+1 Slagstorm
 3 Slumbering Cerberus
 1 Sourbread Auntie
+1 Spitfire Lagac
 2 Strongbox Raider
 4 Sunshot Militia
 1 The Cave of Two Lovers
@@ -456,6 +459,7 @@
 1 Dawn's Light Archer
 1 Defiant Survivor
 4 Druid of the Cowl
+1 Dwynen's Elite
 4 Eager Trufflesnout
 1 Earth's Mightiest Heroes
 1 Epic Proportions
@@ -605,7 +609,7 @@
 3 Gleaming Barrier
 1 Gold Pan
 1 Gold-Forged Thopteryx
-5 Goldvein Pick
+6 Goldvein Pick
 1 Jade-Cast Sentinel
 1 Jeskai Monument
 1 Juggernaut
