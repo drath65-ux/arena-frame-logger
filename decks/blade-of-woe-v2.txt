@@ -4,7 +4,7 @@ Deck
 1 Popular Egotist
 1 Sawblade Skinripper
 3 Infernal Vessel
-1 Heartfire Immolator
+1 Feed the Swarm
 2 Vampire Gourmand
 1 Dreaded Bat-Cloud
 2 Vampire Nighthawk
