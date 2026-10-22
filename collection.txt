@@ -54,6 +54,7 @@
 1 Jolly Gerbils
 1 Karlov Watchdog
 1 Kellan, Daring Traveler
+1 Kindred Judgment
 2 Knight's Pledge
 3 Leonin Vanguard
 2 Leonin Warleader
@@ -198,7 +199,7 @@
 1 Sinister Cryologist
 1 Sleep
 2 Soulblade Djinn
-1 Sphinx's Approach
+3 Sphinx's Approach
 1 Stillness in Motion
 1 Summit Sentinel
 1 Summon: Shiva
@@ -217,6 +218,7 @@
 1 Unlucky Drop
 1 Variable Chaser
 3 Waterkin Shaman
+2 Way of the Cryomancer
 1 We Say Thee Nay!
 1 Windreader Sphinx
 2 Windstorm Drake
@@ -393,6 +395,7 @@
 2 Burn Bright
 1 Burning Curiosity
 1 Burst Lightning
+1 Chandra's Emberling
 2 Combustion Man
 1 Diversion Specialist
 1 Dori, Bearer of Friends
@@ -537,6 +540,7 @@
 1 Elenda, Saint of Dusk
 3 Emergency Phytomedic
 3 Empyrean Eagle
+1 Fblthp, Knows the Way
 2 Fiendish Panda
 1 Fire Lord Azula
 1 Foot Elite
@@ -638,6 +642,7 @@
 1 Elvenking's Halls
 1 Eroded Canyon
 6 Evolving Wilds
+1 Fatehold Annex
 1 Foul Roads
 4 Golgari Guildgate
 1 Gongaga, Reactor Town
