@@ -9,9 +9,8 @@ Deck
 1 Dreaded Bat-Cloud
 2 Vampire Nighthawk
 2 Tragic Banshee
-1 Massacre Girl, Most Wanted
+2 Massacre Girl, Most Wanted
 2 Arbiter of Woe
-1 Vampire Soulcaller
 2 Combustion Man
 1 Vampiric Rites
 3 Murder

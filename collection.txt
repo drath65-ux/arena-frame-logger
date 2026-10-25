@@ -82,7 +82,7 @@
 2 Repurposed Enforcer
 2 Resolute Reinforcements
 1 Ride's End
-1 Saheeli, Consul of Oversight
+2 Saheeli, Consul of Oversight
 2 Sanctuary Cat
 1 Sandbenders' Storm
 3 Savannah Lions
@@ -210,13 +210,14 @@
 1 Tetsuko Umezawa, Fugitive
 1 The Prima Vista
 1 Theorist's Proxy
-2 Theorix Metamage
+3 Theorix Metamage
 1 Thoughtsteal Sprites
 1 Tidal Terror
 1 Tolarian Contempt
 4 Tolarian Terror
 1 Twinned Vision
 1 Unlucky Drop
+1 Unsummon
 1 Variable Chaser
 3 Waterkin Shaman
 2 Way of the Cryomancer
@@ -307,7 +308,7 @@
 1 Malboro
 2 Marauding Blight-Priest
 2 Mardu Outrider
-1 Massacre Girl, Most Wanted
+2 Massacre Girl, Most Wanted
 1 Massacre Wurm
 1 Maximum Overdrive
 1 Mephitic Draught
@@ -416,8 +417,10 @@
 1 Goblin Trashmaster
 1 Gristle Glutton
 2 Heartfire Immolator
+1 Heartstring Puller
 1 Impact Tremors
 1 Incinerating Blast
+1 Jiang Yanggu, Alone
 2 Krenko, Mob Boss
 1 Meticulous Artisan
 1 Obliterating Bolt
@@ -476,6 +479,7 @@
 1 Ghalta the Unstoppable
 1 Goldvein Hydra
 1 Great Forest Druid
+1 Greenhouse Propagator
 1 Groundchuck & Dirtbag
 1 Grow from the Ashes
 1 Guardian of the Halls
@@ -590,6 +594,7 @@
 1 Scalar Scholar
 2 Scintillating Encore
 1 Sigarda, Font of Blessings
+1 Solitary Cell
 1 Stingerquill Charm
 1 Swiftblade Vindicator
 2 Tatyova, Benthic Druid

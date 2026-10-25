@@ -83,7 +83,7 @@ Repel Calamity,W,1,
 Repurposed Enforcer,W,2,
 Resolute Reinforcements,W,2,
 Ride's End,W,1,
-"Saheeli, Consul of Oversight",W,1,
+"Saheeli, Consul of Oversight",W,2,
 Sanctuary Cat,W,2,
 Sandbenders' Storm,W,1,
 Savannah Lions,W,3,
@@ -211,13 +211,14 @@ Tempest Angler,U,1,
 "Tetsuko Umezawa, Fugitive",U,1,
 The Prima Vista,U,1,
 Theorist's Proxy,U,1,
-Theorix Metamage,U,2,
+Theorix Metamage,U,3,
 Thoughtsteal Sprites,U,1,
 Tidal Terror,U,1,owned; copy count not read
 Tolarian Contempt,U,1,
 Tolarian Terror,U,4,
 Twinned Vision,U,1,
 Unlucky Drop,U,1,
+Unsummon,U,1,pack 2026-10-25
 Variable Chaser,U,1,
 Waterkin Shaman,U,3,
 Way of the Cryomancer,U,2,pack 2026-10-22
@@ -308,7 +309,7 @@ Malakir Cullblade,B,3,
 Malboro,B,1,
 Marauding Blight-Priest,B,2,
 Mardu Outrider,B,2,
-"Massacre Girl, Most Wanted",B,1,
+"Massacre Girl, Most Wanted",B,2,
 Massacre Wurm,B,1,
 Maximum Overdrive,B,1,
 Mephitic Draught,B,1,
@@ -417,8 +418,10 @@ Goblin Surprise,R,1,Jump In 2026-10-14
 Goblin Trashmaster,R,1,
 Gristle Glutton,R,1,Jump In 2026-10-14; color unverified
 Heartfire Immolator,R,2,
+Heartstring Puller,R,1,pack 2026-10-25
 Impact Tremors,R,1,Jump In 2026-10-14
 Incinerating Blast,R,1,pack 2026-10-15
+"Jiang Yanggu, Alone",R,1,pack 2026-10-25
 "Krenko, Mob Boss",R,2,
 Meticulous Artisan,R,1,
 Obliterating Bolt,R,1,Jump In 2026-10-14
@@ -477,6 +480,7 @@ Ghalta the Immovable,G,1,
 Ghalta the Unstoppable,G,1,
 Goldvein Hydra,G,1,
 Great Forest Druid,G,1,
+Greenhouse Propagator,G,1,pack 2026-10-25
 Groundchuck & Dirtbag,G,1,
 Grow from the Ashes,G,1,
 Guardian of the Halls,G,1,
@@ -591,6 +595,7 @@ Sawblade Skinripper,Multicolor,1,Jump In 2026-10-14; color unverified
 Scalar Scholar,Multicolor,1,
 Scintillating Encore,Multicolor,2,
 "Sigarda, Font of Blessings",Multicolor,1,
+Solitary Cell,Multicolor,1,pack 2026-10-25
 Stingerquill Charm,Multicolor,1,
 Swiftblade Vindicator,Multicolor,1,
 "Tatyova, Benthic Druid",Multicolor,2,
