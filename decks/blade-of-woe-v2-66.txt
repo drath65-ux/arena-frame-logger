@@ -24,6 +24,6 @@ Deck
 2 Worthy Cost
 1 Massacre Wurm
 2 Blood Crypt
-2 Bloodfell Caves
+3 Bloodfell Caves
 13 Swamp
-7 Mountain
+8 Mountain
