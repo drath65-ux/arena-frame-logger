@@ -1,5 +1,7 @@
 Deck
 4 Reassembling Skeleton
+1 Bile-Vial Boggart
+1 Fear of Lost Teeth
 2 Vengeful Bloodwitch
 1 Popular Egotist
 1 Sawblade Skinripper
@@ -10,12 +12,14 @@ Deck
 2 Vampire Nighthawk
 2 Tragic Banshee
 2 Massacre Girl, Most Wanted
-2 Arbiter of Woe
+1 Arbiter of Woe
 2 Combustion Man
 1 Vampiric Rites
 3 Murder
 2 Hero's Downfall
-2 Fiery Annihilation
+1 Fiery Annihilation
+1 Wrath of the Bloodmane
+1 Dragon Fodder
 2 Scorching Dragonfire
 2 Worthy Cost
 1 Massacre Wurm
