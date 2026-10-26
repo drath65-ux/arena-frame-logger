@@ -15,6 +15,7 @@
 1 Bola Slinger
 1 Bond of Discipline
 1 Brightfield Glider
+1 Campus Crier
 2 Cat Collector
 1 Celestial Armor
 4 Charmed Stray
@@ -210,11 +211,12 @@
 1 Tetsuko Umezawa, Fugitive
 1 The Prima Vista
 1 Theorist's Proxy
-3 Theorix Metamage
+4 Theorix Metamage
 1 Thoughtsteal Sprites
 1 Tidal Terror
 1 Tolarian Contempt
 4 Tolarian Terror
+1 Traxos, Academy Guardian
 1 Twinned Vision
 1 Unlucky Drop
 1 Unsummon
@@ -388,6 +390,7 @@
 1 Winter's Intervention
 2 Worthy Cost
 5 Zombify
+1 Ajani Unrelenting
 1 Awaken the Inferno
 1 Blazing Crescendo
 1 Boilerbilges Ripper
@@ -448,6 +451,7 @@
 1 Urabrask the Hidden
 1 Volley Veteran
 1 Warren Torchmaster
+1 Wrath of the Bloodmane
 3 Affectionate Indrik
 3 Apothecary Stomper
 1 Arcane Amphisbaena
@@ -514,6 +518,7 @@
 1 Tigra, Feline Fury
 1 Tunnel Tipster
 1 Vengeful Creeper
+1 Vinelasher Adept
 1 Vizier of the Menagerie
 4 Wary Thespian
 1 Way of the Wildspeaker
