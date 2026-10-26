@@ -603,6 +603,7 @@
 1 Stingerquill Charm
 1 Swiftblade Vindicator
 2 Tatyova, Benthic Druid
+1 The Emperor of Palamecia
 1 The Serpent Society
 1 Titania, Rugged Rumbler
 1 Tyrant's Scorn
