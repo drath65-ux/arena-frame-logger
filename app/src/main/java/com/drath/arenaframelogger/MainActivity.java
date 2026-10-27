@@ -56,6 +56,16 @@ public class MainActivity extends Activity {
     static final String KEY_FULL_SCREEN = "full_screen";
     static final String KEY_BUBBLE = "bubble_enabled";
 
+    private void runUpload(java.util.concurrent.Callable<String> job) {
+        Toast.makeText(this, "Working...", Toast.LENGTH_SHORT).show();
+        new Thread(() -> {
+            String msg;
+            try { msg = job.call(); } catch (Exception e) { msg = "Failed: " + e.getMessage(); }
+            String m2 = msg;
+            runOnUiThread(() -> Toast.makeText(this, m2, Toast.LENGTH_LONG).show());
+        }).start();
+    }
+
     private void askUsageAccess() {
         new android.app.AlertDialog.Builder(this)
                 .setTitle("Only record Arena?")
@@ -153,6 +163,36 @@ public class MainActivity extends Activity {
         fullBox.setOnLongClickListener(v -> { askUsageAccess(); return true; });
         root.addView(fullBox);
         updateFullBoxText();
+
+        TextView upHdr = new TextView(this);
+        upHdr.setText("\nAuto-upload games to GitHub");
+        upHdr.setTextSize(16);
+        root.addView(upHdr);
+        EditText tokenBox = new EditText(this);
+        tokenBox.setHint("GitHub token (fine-grained, this repo only)");
+        tokenBox.setInputType(android.text.InputType.TYPE_CLASS_TEXT | android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        tokenBox.setText(getSharedPreferences(PREFS, MODE_PRIVATE).getString(Uploader.KEY_TOKEN, ""));
+        root.addView(tokenBox);
+        CheckBox autoBox = new CheckBox(this);
+        autoBox.setText("Upload each game automatically when recording stops");
+        autoBox.setChecked(getSharedPreferences(PREFS, MODE_PRIVATE).getBoolean(Uploader.KEY_AUTO, false));
+        autoBox.setOnCheckedChangeListener((b, on) ->
+                getSharedPreferences(PREFS, MODE_PRIVATE).edit().putBoolean(Uploader.KEY_AUTO, on).apply());
+        root.addView(autoBox);
+        LinearLayout upRow = new LinearLayout(this);
+        Button saveTok = new Button(this);
+        saveTok.setText("Save + test token");
+        Button upNow = new Button(this);
+        upNow.setText("Upload pending");
+        upRow.addView(saveTok);
+        upRow.addView(upNow);
+        root.addView(upRow);
+        saveTok.setOnClickListener(v -> {
+            getSharedPreferences(PREFS, MODE_PRIVATE).edit()
+                    .putString(Uploader.KEY_TOKEN, tokenBox.getText().toString().trim()).apply();
+            runUpload(() -> Uploader.test(this));
+        });
+        upNow.setOnClickListener(v -> runUpload(() -> Uploader.uploadPending(this)));
 
         LinearLayout buttons = new LinearLayout(this);
         buttons.setOrientation(LinearLayout.HORIZONTAL);

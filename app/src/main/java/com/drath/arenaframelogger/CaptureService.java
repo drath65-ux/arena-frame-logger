@@ -295,7 +295,12 @@ public class CaptureService extends Service {
             cleanupOldZips();
             if (game) {
                 String r = "W".equals(autoResult) ? "Victory detected. " : "L".equals(autoResult) ? "Defeat detected. " : "";
-                notifyDone(r + "Saved " + info + ". Tap to log the match.", true);
+                String up = "";
+                if (Uploader.enabled(this)) {
+                    Uploader.addPending(this, zip.toString());
+                    up = " " + Uploader.uploadPending(this);
+                }
+                notifyDone(r + "Saved " + info + "." + up + " Tap to log the match.", true);
             } else {
                 notifyDone("Saved " + info + ". Tap to share.", false);
             }
