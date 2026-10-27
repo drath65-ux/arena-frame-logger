@@ -83,7 +83,7 @@
 2 Repurposed Enforcer
 2 Resolute Reinforcements
 1 Ride's End
-2 Saheeli, Consul of Oversight
+3 Saheeli, Consul of Oversight
 2 Sanctuary Cat
 1 Sandbenders' Storm
 3 Savannah Lions
@@ -211,7 +211,7 @@
 1 Tetsuko Umezawa, Fugitive
 1 The Prima Vista
 1 Theorist's Proxy
-4 Theorix Metamage
+5 Theorix Metamage
 1 Thoughtsteal Sprites
 1 Tidal Terror
 1 Tolarian Contempt
@@ -454,7 +454,7 @@
 1 Wrath of the Bloodmane
 3 Affectionate Indrik
 3 Apothecary Stomper
-1 Arcane Amphisbaena
+2 Arcane Amphisbaena
 1 Attercop
 1 Bakersbane Duo
 1 Beast-Kin Ranger
@@ -503,6 +503,7 @@
 1 Ostrich-Horse
 1 Overgrown Zealot
 1 Piercing Exhale
+1 Primal Witchstalker
 1 Primeval Bounty
 1 Quarrel
 1 Quilled Greatwurm
@@ -539,7 +540,7 @@
 1 Bogwater Lumaret
 1 Camellia, the Seedmiser
 1 Campus Renovation
-1 Charge the Sanctum
+2 Charge the Sanctum
 2 Cloudblazer
 1 Cuboid Colony
 1 Disturbing Mirth
@@ -577,6 +578,7 @@
 1 Konstrari Improviser
 1 Lluwen, Imperfect Naturalist
 1 Lotuslight Dancers
+1 Mabel, Valley Hero
 1 Master's Guide-Mural
 1 Mendicant Core, Guidelight
 1 Merrow Skyswimmer
@@ -623,6 +625,7 @@
 1 Bender's Waterskin
 1 Camera Launcher
 1 Changeling Wayfinder
+1 Codie, Ravenous Codex
 1 Emrakul, the Exigent Doom
 1 Firdoch Core
 3 Gleaming Barrier
@@ -699,6 +702,7 @@
 1 Temple of Plenty
 1 Temple of Silence
 1 Temple of Triumph
+1 Theorix Annex
 4 Thornwood Falls
 1 Three Tree City
 4 Tranquil Cove
