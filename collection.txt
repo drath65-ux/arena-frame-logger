@@ -595,6 +595,7 @@
 1 Reyav, Master Smith
 2 Rootha, Ardent Artisan
 2 Ruby, Daring Tracker
+1 Rune-Brand Juggler
 1 Sawblade Skinripper
 1 Scalar Scholar
 2 Scintillating Encore
