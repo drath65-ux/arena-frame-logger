@@ -234,6 +234,7 @@
 1 Aggressive Negotiations
 1 Alchemist's Assistant
 1 Another Chance
+1 Apex Witchstalker
 2 Arbiter of Woe
 2 Auntie's Sentence
 1 Ayara's Oathsworn
@@ -271,6 +272,7 @@
 3 Engine Rat
 1 Etched Host Doombringer
 1 Eternal Thirst
+1 Extended Absence
 2 Fake Your Own Death
 1 Fatal Push
 1 Fear of Lost Teeth
@@ -280,6 +282,7 @@
 1 Feral Deathgorger
 1 Front Porch Sentries
 2 Gallia, Tragic Host
+1 Gideon the Oathless
 1 Give In to Violence
 1 Graveshifter
 1 Gravkill
@@ -305,12 +308,13 @@
 1 Kalakscion, Hunger Tyrant
 2 Lightless Evangel
 1 Locust Spray
+1 Mabel, Bitter Recluse
 1 Macabre Reconstruction
 3 Malakir Cullblade
 1 Malboro
 2 Marauding Blight-Priest
 2 Mardu Outrider
-2 Massacre Girl, Most Wanted
+3 Massacre Girl, Most Wanted
 1 Massacre Wurm
 1 Maximum Overdrive
 1 Mephitic Draught
@@ -325,7 +329,8 @@
 1 Phantom Train
 1 Phyrexian Arena
 1 Popular Egotist
-1 Rank Rat
+1 Rampart Hunter
+2 Rank Rat
 2 Reassembling Skeleton
 1 Red Room Recruit
 1 Requiting Hex
@@ -339,12 +344,13 @@
 2 Sanguine Syphoner
 2 Sanitarium Skeleton
 3 Savage Gorger
+1 Screeching Soulbreaker
 1 Seeker's Folly
 3 Sengir Vampire
 1 Shefet Archfiend
 2 Shredder's Revenge
 1 Sidisi, Regent of the Mire
-3 Silence the Echo
+4 Silence the Echo
 2 Skeleton Archer
 1 Skulduggery
 2 Sneering Shadewriter
@@ -362,9 +368,10 @@
 1 Susurian Dirgecraft
 1 Swarm Culler
 1 Syphon Fuel
+1 Terminal Criticism
 1 Teyo, Diamondblade Mage
 1 The Sackville-Bagginses
-1 Theoretical Necromancer
+2 Theoretical Necromancer
 1 Tinybones, Pocket Nuisance
 2 Tragic Banshee
 1 Tragic Trajectory
@@ -388,11 +395,12 @@
 1 Wander Off
 1 Way of the Deathbringer
 1 Winter's Intervention
+1 Winter, Tormented Loner
 2 Worthy Cost
 5 Zombify
 1 Ajani Unrelenting
 1 Awaken the Inferno
-1 Blazing Crescendo
+2 Blazing Crescendo
 1 Boilerbilges Ripper
 1 Bombard
 1 Brambleback Brute
@@ -401,8 +409,9 @@
 2 Burn Bright
 1 Burning Curiosity
 1 Burst Lightning
-1 Chandra's Emberling
+2 Chandra's Emberling
 2 Combustion Man
+1 Command the Stage
 1 Diversion Specialist
 1 Dori, Bearer of Friends
 1 Dragon Fodder
@@ -420,10 +429,10 @@
 1 Goblin Trashmaster
 1 Gristle Glutton
 2 Heartfire Immolator
-1 Heartstring Puller
+2 Heartstring Puller
 1 Impact Tremors
 1 Incinerating Blast
-1 Jiang Yanggu, Alone
+2 Jiang Yanggu, Alone
 2 Krenko, Mob Boss
 1 Meticulous Artisan
 1 Obliterating Bolt
@@ -444,6 +453,7 @@
 1 Spitfire Lagac
 2 Strongbox Raider
 4 Sunshot Militia
+1 Tether Technician
 1 The Cave of Two Lovers
 1 The Last Agni Kai
 1 Thunder Salvo
@@ -451,7 +461,7 @@
 1 Urabrask the Hidden
 1 Volley Veteran
 1 Warren Torchmaster
-1 Wrath of the Bloodmane
+2 Wrath of the Bloodmane
 3 Affectionate Indrik
 3 Apothecary Stomper
 2 Arcane Amphisbaena
@@ -460,7 +470,7 @@
 1 Beast-Kin Ranger
 1 Bestow Greatness
 1 Broken Wings
-1 Budding Insurgent
+2 Budding Insurgent
 1 Burrog Barrage
 1 Cactarantula
 1 Celestial Reunion
@@ -491,7 +501,7 @@
 1 Heaped Harvest
 1 Huatli's Final Strike
 4 Ilysian Caryatid
-2 Inspired Tethermage
+3 Inspired Tethermage
 1 Intrepid Tenderfoot
 1 Loot, Exuberant Explorer
 1 Loot, the Nexus
@@ -515,7 +525,7 @@
 1 Scavenging Ooze
 2 Sentinel Spider
 2 Stony Strength
-2 Tethermage's Advantage
+3 Tethermage's Advantage
 1 Tigra, Feline Fury
 1 Tunnel Tipster
 1 Vengeful Creeper
@@ -549,6 +559,7 @@
 1 Earth Kingdom Soldier
 1 Eclipsed Boggart
 1 Eclipsed Elf
+1 Edgar, Ancient Bloodlord
 1 Elemental Mascot
 1 Elenda, Saint of Dusk
 3 Emergency Phytomedic
@@ -562,6 +573,7 @@
 3 Good-Fortune Unicorn
 1 Grave Studies
 1 Gremlin Tamer
+1 Grim Repriser
 1 Grimgrin, Corpse-Born
 1 Grub's Command
 1 Halana and Alena, Partners
@@ -617,7 +629,7 @@
 3 Wardens of the Cycle
 1 Warrior's Blades
 1 Wary Farmer
-1 Whiplash Wordsmith
+2 Whiplash Wordsmith
 1 Zimone and Dina
 1 Zurgo, Thunder's Decree
 1 Bandit's Haul
@@ -654,6 +666,7 @@
 2 Boros Guildgate
 4 Command Tower
 1 Crystal Grotto
+1 Dedicated Commons
 4 Dimir Guildgate
 4 Dismal Backwater
 1 Drannith Ruins
@@ -667,10 +680,13 @@
 4 Gruul Guildgate
 2 Hidden Cataract
 1 Hidden Grotto
+1 Innovative Commons
 1 Insomnia, Crown City
 4 Izzet Guildgate
 4 Jungle Hollow
+1 Konstrari Annex
 1 Kyoshi Village
+1 Meticulous Commons
 1 Moldering Gym
 1 Mystic Monastery
 1 North Pole Gates
