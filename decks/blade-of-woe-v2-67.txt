@@ -5,6 +5,8 @@ Deck
 2 Vengeful Bloodwitch
 1 Popular Egotist
 1 Sawblade Skinripper
+1 Edgar, Ancient Bloodlord
+1 Screeching Soulbreaker
 3 Infernal Vessel
 1 Feed the Swarm
 2 Vampire Gourmand
@@ -12,17 +14,15 @@ Deck
 2 Vampire Nighthawk
 2 Tragic Banshee
 2 Massacre Girl, Most Wanted
-1 Arbiter of Woe
 2 Combustion Man
 1 Vampiric Rites
 3 Murder
 2 Hero's Downfall
-1 Fiery Annihilation
 1 Wrath of the Bloodmane
 1 Dragon Fodder
 2 Scorching Dragonfire
 2 Worthy Cost
-1 Massacre Wurm
+2 Massacre Wurm
 2 Blood Crypt
 3 Bloodfell Caves
 13 Swamp
