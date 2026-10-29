@@ -88,6 +88,7 @@
 1 Sandbenders' Storm
 3 Savannah Lions
 4 Serra Angel
+1 Shatterwing Pegasus
 2 Shrine Keeper
 1 Shrouded Shepherd
 1 Sigiled Sentinel
@@ -219,10 +220,11 @@
 1 Traxos, Academy Guardian
 1 Twinned Vision
 1 Unlucky Drop
-1 Unsummon
+2 Unsummon
 1 Variable Chaser
 3 Waterkin Shaman
 2 Way of the Cryomancer
+1 Way of the Mind Sculptor
 1 We Say Thee Nay!
 1 Windreader Sphinx
 2 Windstorm Drake
@@ -392,6 +394,7 @@
 2 Vampiric Rites
 2 Vengeful Bloodwitch
 1 Virus Beetle
+1 Void Extrapolator
 1 Wander Off
 1 Way of the Deathbringer
 1 Winter's Intervention
@@ -489,7 +492,7 @@
 4 Felling Blow
 1 Follow the Lumarets
 1 Garruk's Uprising
-1 Ghalta the Immovable
+2 Ghalta the Immovable
 1 Ghalta the Unstoppable
 1 Goldvein Hydra
 1 Great Forest Druid
@@ -512,6 +515,7 @@
 3 Nessian Hornbeetle
 1 Ostrich-Horse
 1 Overgrown Zealot
+1 Pia, Aether Ascetic
 1 Piercing Exhale
 1 Primal Witchstalker
 1 Primeval Bounty
@@ -527,6 +531,7 @@
 2 Stony Strength
 3 Tethermage's Advantage
 1 Tigra, Feline Fury
+1 Titanbones, Towering Heart
 1 Tunnel Tipster
 1 Vengeful Creeper
 1 Vinelasher Adept
@@ -621,6 +626,7 @@
 1 The Emperor of Palamecia
 1 The Serpent Society
 1 Titania, Rugged Rumbler
+1 Tomik, Orzhov Lawmage
 1 Tyrant's Scorn
 1 Unflinching Courage
 1 Vindictive Warden
@@ -632,6 +638,7 @@
 2 Whiplash Wordsmith
 1 Zimone and Dina
 1 Zurgo, Thunder's Decree
+1 Afterthought Sentry
 1 Bandit's Haul
 1 Banner of Kinship
 1 Bender's Waterskin
@@ -647,6 +654,8 @@
 1 Jade-Cast Sentinel
 1 Jeskai Monument
 1 Juggernaut
+1 Karn, Gilded Guardian
+1 Keeper of the Quiet Hour
 1 Kitesail
 1 Magnifying Glass
 1 Starting Column
@@ -666,7 +675,7 @@
 2 Boros Guildgate
 4 Command Tower
 1 Crystal Grotto
-1 Dedicated Commons
+2 Dedicated Commons
 4 Dimir Guildgate
 4 Dismal Backwater
 1 Drannith Ruins
@@ -705,7 +714,7 @@
 2 Snow-Covered Island
 2 Snow-Covered Plains
 2 Snow-Covered Swamp
-1 Stingerquill Annex
+2 Stingerquill Annex
 1 Susur Secundi, Void Altar
 5 Swiftwater Cliffs
 1 Temple of Abandon
